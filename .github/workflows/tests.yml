@@ -1,0 +1,19 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      # The OCP wheel links against OpenGL even for headless use.
+      - run: sudo apt-get update && sudo apt-get install -y libgl1 libglu1-mesa
+      - run: python -m pip install -r requirements.txt
+      - run: pytest

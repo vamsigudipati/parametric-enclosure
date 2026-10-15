@@ -1,0 +1,15 @@
+{
+  "L": 100.0,
+  "W": 60.0,
+  "H": 30.0,
+  "thickness": 3.0,
+  "fillet_radius": 5.0,
+  "post_radius": 4.0,
+  "hole_radius": 1.5,
+  "hole_blind": false,
+  "post_seat_depth": 1.0,
+  "post_top_recess": 1.0,
+  "post_inset": 7.5,
+  "posts_x": 2,
+  "posts_y": 2
+}
